@@ -1,5 +1,6 @@
 package cn.liujc.controller;
 
+import cn.liujc.model.TItem;
 import cn.liujc.model.TOrder;
 import cn.liujc.service.impl.TOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,5 +52,15 @@ public class OrderController {
     @GetMapping("/insert")
     public Boolean insert(TOrder order) {
         return orderService.save(order);
+    }
+
+    @GetMapping("/item")
+    public List<TItem> select(String name) {
+        return orderService.getItemByOrderName(name);
+    }
+
+    @GetMapping("/itemId")
+    public List<TItem> selectId(Long id) {
+        return orderService.getItemByOrderId(id);
     }
 }
