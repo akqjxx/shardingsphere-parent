@@ -1,4 +1,4 @@
-package cn.liujc.service.impl;
+package cn.liujc.service;
 
 import cn.liujc.model.TUser;
 import com.baomidou.mybatisplus.extension.service.IService;

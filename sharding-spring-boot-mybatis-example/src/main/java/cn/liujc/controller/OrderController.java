@@ -2,7 +2,7 @@ package cn.liujc.controller;
 
 import cn.liujc.model.TItem;
 import cn.liujc.model.TOrder;
-import cn.liujc.service.impl.TOrderService;
+import cn.liujc.service.TOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;

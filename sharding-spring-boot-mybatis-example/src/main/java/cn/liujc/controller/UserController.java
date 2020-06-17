@@ -1,9 +1,7 @@
 package cn.liujc.controller;
 
-import cn.liujc.model.TOrder;
 import cn.liujc.model.TUser;
-import cn.liujc.service.impl.TOrderService;
-import cn.liujc.service.impl.TUserService;
+import cn.liujc.service.TUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
