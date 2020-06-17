@@ -16,7 +16,7 @@ spring:
         type: com.alibaba.druid.pool.DruidDataSource
         #        type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://121.36.128.152:3307/ds?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+        url: jdbc:mysql://121.36.128.152:3307/ds?allowPublicKeyRetrieval=true&serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
         #        jdbc-url: jdbc:mysql://121.36.128.152:3307/ds?allowPublicKeyRetrieval=true&useSSL=false
         username: root
         password: root

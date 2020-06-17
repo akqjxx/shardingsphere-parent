@@ -42,3 +42,4 @@ mvnw.cmd
 
 
 .flattened-pom.xml
+sharding-spring-boot-mybatis-example/src/test/
