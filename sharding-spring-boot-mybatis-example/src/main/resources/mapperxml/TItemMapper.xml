@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.liujc.dao.TItemMapper">
+    <resultMap id="BaseResultMap" type="cn.liujc.model.TItem">
+        <!--@mbg.generated-->
+        <!--@Table t_item-->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="order_id" jdbcType="BIGINT" property="orderId"/>
+        <result column="item_name" jdbcType="VARCHAR" property="itemName"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        b.id, b.order_id, b.item_name
+    </sql>
+    <select id="getItemByOrderName" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_order a,t_item b
+        where a.id=b.order_id
+        and a.name=#{name,jdbcType=VARCHAR}
+    </select>
+    <select id="getItemByOrderId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_order a,t_item b
+        where a.id=b.order_id
+        and a.id=#{id,jdbcType=BIGINT}
+    </select>
+</mapper>
